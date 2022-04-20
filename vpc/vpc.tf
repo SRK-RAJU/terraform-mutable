@@ -1,5 +1,5 @@
 resource "aws_vpc" "main" {
-  cidr_block           = var.VPC_CIDR_MAIN[count.index]
+  cidr_block           = element(var.VPC_CIDR_MAIN, count.index)
   enable_dns_hostnames = true
   enable_dns_support   = true
 
