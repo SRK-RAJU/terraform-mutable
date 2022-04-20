@@ -22,9 +22,9 @@ output "PUBLIC_SUBNET_CIDR" {
   value = aws_subnet.public-subnets.*.cidr_block
 }
 
-output "DEFAULT_VPC_CIDR" {
-  value = var.DEFAULT_VPC_CIDR
-}
+#output "DEFAULT_VPC_CIDR" {
+  #value = var.DEFAULT_VPC_CIDR
+#}
 
 output "INTERNAL_HOSTEDZONE_ID" {
   value = var.INTERNAL_HOSTEDZONE_ID

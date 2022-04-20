@@ -3,7 +3,7 @@ resource "aws_route_table" "private-route" {
 
   route = [
     {
-      cidr_block                   = var.DEFAULT_VPC_CIDR
+      cidr_block                   = "172.31.0.0/16"
       vpc_peering_connection_id    = aws_vpc_peering_connection.peer.id
       core_network_arn             = ""
       carrier_gateway_id           = ""
@@ -47,7 +47,7 @@ resource "aws_route_table" "public-route" {
 
   route = [
     {
-      cidr_block                   = var.DEFAULT_VPC_CIDR
+      cidr_block                   = "172.31.0.0/16"
       vpc_peering_connection_id    = aws_vpc_peering_connection.peer.id
       carrier_gateway_id           = ""
       "destination_prefix_list_id" = ""
